@@ -9,7 +9,6 @@
 
 body {
   color: #fff;
-  background-color: #bbb;
   font-family: "Exo", sans-serif;
 }
 
@@ -36,9 +35,23 @@ body {
   height: 3.8rem;
 }
 
-main .principal {
+main {
   position: relative;
   top: 4.8rem;
+}
+main section {
+  text-align: center;
+  background-color: #000;
+}
+main section:nth-child(2) {
+  background-color: #222;
+  padding: 3.5rem 0;
+}
+main section:nth-child(2) h1 {
+  margin: 0 0 3.5rem;
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 main .bg-container {
   margin: 0 auto;
@@ -65,7 +78,7 @@ main .count-container {
   text-align: center;
 }
 main .count-container h3 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -95,6 +108,63 @@ main .timer__item p:first-child {
 main .timer__item p:nth-child(2) {
   font-size: 1rem;
   font-weight: 600;
+}
+main .videos-container {
+  display: flex;
+  justify-content: center;
+}
+main .video-item {
+  object-fit: cover;
+  margin: 0 1rem;
+}
+main .video-item div {
+  width: 12rem;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+main .video-item img {
+  width: 100%;
+}
+main .video-item p {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+main .video-item embed {
+  width: 15rem;
+  height: 15rem;
+}
+
+.footer-container {
+  position: relative;
+  top: 4.8rem;
+  height: 7rem;
+  background-color: #000;
+}
+.footer-container > div {
+  height: 100%;
+  display: grid;
+  margin: 0 4rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* justify-content: center */
+  align-content: center;
+  justify-items: center;
+}
+.footer-container > div div {
+  /* justify-self: center */
+  align-self: center;
+}
+
+.icon-container {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.icon-item {
+  background-color: #29c0d4;
+  padding: 0.3rem 0.4rem;
+  border-radius: 0.3rem;
 }
 
 /*# sourceMappingURL=index.css.map */

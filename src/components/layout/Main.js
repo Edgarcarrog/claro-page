@@ -1,6 +1,8 @@
 import React from 'react'
 import henrik from "../../assets/henrik-von-appen.jpg";
 import Countdown from '../common/Countdown';
+import VideoIcon from '../common/VideoIcon';
+import { VIDEO_IMAGE } from "../../consts/index";
 
 const Main = () => {
   return (
@@ -14,10 +16,11 @@ const Main = () => {
         </div>
       </section>
       <section>
+        <h1>Claro sports en Sochi 2014</h1>
         <div className="videos-container">
-          <div className="photo-container">
-            <img src={henrik} alt="logo-sochi" />
-          </div>
+          {VIDEO_IMAGE.map((data) => (
+            <VideoIcon data={data} />
+          ))}
         </div>
       </section>
     </main>

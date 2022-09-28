@@ -1,8 +1,18 @@
 
 main
-    .principal
-        position: relative
-        top: 4.8rem
+    position: relative
+    top: 4.8rem
+    section
+        text-align: center
+        background-color: $color-black
+    section:nth-child(2)
+        background-color: #222
+        padding: 3.5rem 0
+        h1
+            margin: 0 0 3.5rem
+            font-size: $text-xl
+            font-weight: 300
+            text-transform: uppercase
     .bg-container
         margin: 0 auto
         width: 90%
@@ -49,3 +59,23 @@ main
         p:nth-child(2)
             font-size: $text-sm
             font-weight: 600
+    .videos-container
+        display: flex
+        justify-content: center
+    .video-item
+        object-fit: cover
+        margin: 0 1rem
+        div
+            width: 12rem
+            height: 12rem
+            overflow: hidden
+            border-radius: 50%
+        img
+            width: 100%
+        p
+            margin-top: 1rem
+            text-transform: uppercase
+            font-size: $text-sm
+        embed
+            width: 15rem
+            height: 15rem

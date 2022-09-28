@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Timer from './Timer';
+import { LAST_DATE } from "../../consts/index";
 
 const Countdown = () => {
-  const lastDate = new Date(2022, 9, 1, 0, 0, 0, 0);
+  //console.log("LAST_DATE:", LAST_DATE);
   const [time, setTime] = useState({
     days: null,
     hours: null,
@@ -13,7 +14,7 @@ const Countdown = () => {
   useEffect(() => {
     let intervId =setInterval(() => {
       const currentTime = new Date(Date.now());
-      const difMilisec = lastDate - currentTime;
+      const difMilisec = LAST_DATE - currentTime;
       const days = parseInt(difMilisec / (1000 * 60 * 60 * 24));
       const hours = parseInt(
         (difMilisec % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -21,7 +22,6 @@ const Countdown = () => {
       const minutes = parseInt((difMilisec % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = parseInt((difMilisec % (1000 * 60)) / 1000);
       setTime({ days, hours, minutes, seconds });
-      
     }, 10);
     return () => {
       clearInterval(intervId);
