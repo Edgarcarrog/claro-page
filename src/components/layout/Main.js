@@ -13,7 +13,13 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <section>Segunda sección</section>
+      <section>
+        <div className="videos-container">
+          <div className="photo-container">
+            <img src={henrik} alt="logo-sochi" />
+          </div>
+        </div>
+      </section>
     </main>
   );
 };

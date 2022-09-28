@@ -3,7 +3,7 @@ import logo_sochi from "../../assets/logo-sochi.png";
 
 const Header = () => {
   return (
-    <div className="header">
+    <header className="header">
       <nav className="navbar">
         <ul>
           <li>
@@ -14,7 +14,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
 
