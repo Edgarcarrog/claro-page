@@ -17,27 +17,23 @@ main
         margin: 0 auto
         width: 90%
         height: 600px
+        display: grid
+        grid-template-rows: 30% 70%
+        align-items: center
         background-image: url("../assets/background.jpg")
         background-repeat: no-repeat
         background-size: cover
         overflow: hidden
-    .photo-container
-        width: 80%
-        margin: 0 auto
-        height: 350px
-        overflow: hidden
-        img
-            width: 100%
-            height: 400px
-            object-fit: contain
     .count-container
-        margin: 2rem auto
         text-align: center
         h3
             font-size: $text-xl
             font-weight: 600
             text-transform: uppercase
             margin-bottom: 2rem
+    .photo-container
+        width: 50rem
+        margin: 0 auto
     .timer
         display: flex
         justify-content: center
@@ -65,11 +61,18 @@ main
     .video-item
         object-fit: cover
         margin: 0 1rem
-        div
-            width: 12rem
-            height: 12rem
+        button
+            padding: 0
             overflow: hidden
+            background: none
+            border: none
+            outline: none
             border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+        button:hover
+            cursor: pointer
         img
             width: 100%
         p

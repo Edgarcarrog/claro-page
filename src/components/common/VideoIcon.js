@@ -1,11 +1,14 @@
+import { useContext } from "react";
+import { context } from "../../context/context";
+import { VIDEO_SRC } from "../../consts/index";
 
 const VideoIcon = ({data}) => {
+  const { setVideoSrc } = useContext(context);
   return (
     <div className="video-item">
-      <div>
-        <embed type="video/webm" src="/media/cc0-videos/flower.mp4" autostart />
-      </div>
-      {/* <img src={data.src} alt="team-latam" /> */}
+      <button onClick={() => setVideoSrc(VIDEO_SRC[data.title])}>
+        <img src={data.src} alt={data.src} />
+      </button>
       <p>{data.title}</p>
     </div>
   );

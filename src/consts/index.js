@@ -11,3 +11,11 @@ export const VIDEO_IMAGE = [
   { src: velocidad_riesgo, title: "velocidad y riesgo" },
   { src: experiencia, title: "experiencia multimedia" },
 ];
+export const VIDEO_SRC = {
+  "team latam": "https://www.youtube.com/embed/wgoQdMUdsZE?controls=0",
+  "travel meets fashion":
+    "https://www.youtube.com/embed/4vRViNX00QQ?controls=0",
+  "velocidad y riesgo": "https://www.youtube.com/embed/peuVFBTt47o?controls=0",
+  "experiencia multimedia":
+    "https://www.youtube.com/embed/o3SftJsjrSI?controls=0",
+};
