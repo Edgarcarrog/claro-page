@@ -6,9 +6,9 @@ export const context = createContext();
 const Provider = ({ children }) => {
   const initialState = {
     videoSrc: null,
+    videoText: [true, false, false, false],
   };
 
-  //Dispatch para ejecutar las acciones
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const setVideoSrc = (src) => {
@@ -18,11 +18,20 @@ const Provider = ({ children }) => {
     });
   };
 
+  const changeVideoText = (index) => {
+    dispatch({
+      type: "CHANGE_VIDEO_TEXT",
+      payload: index,
+    });
+  };
+
   return (
     <context.Provider
       value={{
         videoSrc: state.videoSrc,
+        videoText: state.videoText,
         setVideoSrc,
+        changeVideoText,
       }}
     >
       {children}

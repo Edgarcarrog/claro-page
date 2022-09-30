@@ -17,15 +17,8 @@ const Main = () => {
         <div className="bg-container">
           <Countdown />
           <div className="photo-container">
-            {/* <embed
-              width="600px"
-              height="400px"
-              type="video/webm"
-              src="../../assets/team_latam.mp4"
-            /> */}
             <iframe
-              width="560px"
-              height="315px"
+              className="frame"
               src={videoSrc}
               title="YouTube video player"
               frameBorder="0"
@@ -39,7 +32,7 @@ const Main = () => {
         <h1>Claro sports en Sochi 2014</h1>
         <div className="videos-container">
           {VIDEO_IMAGE.map((data, index) => (
-            <VideoIcon key={index} data={data} />
+            <VideoIcon key={index} index={index} data={data} />
           ))}
         </div>
       </section>
